@@ -161,17 +161,17 @@ html, body {
  background-repeat: no-repeat;
  background-position: center center;
 }
-#flat .gradient {
+#flat .line-break1 {
  background: linear-gradient(60deg, yellow, green, pink);
  width: 100%;
  margin: 0 auto;
 }
-#flat .mother {
+#flat .line-break2 {
  background: linear-gradient(60deg, green, pink, yellow);
  width: 100%;
  margin: 0 auto;
 }
-#flat .father {
+#flat .line-break3 {
  background: linear-gradient(60deg, pink, yellow, green);
  width: 100%;
  margin: 0 auto;
