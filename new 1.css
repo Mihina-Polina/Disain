@@ -1,206 +1,426 @@
-@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
-html, body {
-  font-family: 'Open Sans', sans-serif;
-  height: 100%;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,900');
+
+::-webkit-scrollbar {
+  width: 13px;
+
+  
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 1px 1px 2px #E0E0E0;
+  border: 11px solid transparent;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #646464;
+  -webkit-box-shadow: inset 1px 1px 2px rgba(155, 155, 155, 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aaaaaa;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #888;
+  -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: white;
+  }     
+    
+*{
   margin: 0;
-  background-color: brown;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;   
 }
-.box {
-    width: 80%;
-    position: absolute;
-    margin-top: -450px;
-  overflow: auto;
+/*параметры для смартфонов*/
+@media only screen and (max-width:480px) {
+ul {
+  position: fixed;
+  display: block;
+  margin-left: 20px;
+  margin-top: 35vw;
+  z-index: 3;
 }
-#main {
- width: 100%;
- padding: 0;
+  
+.nav {
+  position: fixed;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  transform: rotate(-90deg);
+  margin-left: 0px;
+  margin-top: 15vw;
+  letter-spacing: 0.2vw;
+  z-index: 3;
 }
-.content-asset p {
- margin: 0 auto;
+  
+li {
+  content:'';
+  height: 40px;
+  width: 5px;
+  transition: width 0.3s ease-in-out;
+}  
+  
+li:hover  {
+   transition: width 0.3s ease-in-out;
+   width: 8.3vw;
 }
-.breadcrumb {
- display: none;
+#one {background-color:#4169E1;}
+#two {background-color:#B22222;}
+#three {background-color:#C71585;}
+#four {background-color:#9370DB;}
+#five {background-color:#483D8B;}
+section {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
-.margin-top-10 {
- padding-top: 10px;
+  
+section .cover {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
-.margin-bot-10 {
- padding-bottom: 10px;
+section .cover img #start{
+  position: absolute;
+  display: block;
+  min-width: 150%;
+  min-height: 150%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-#flat h1 {
- font-family: 'Oswald', sans-serif;
- font-size: 24px;
- font-weight: 400;
- text-transform: uppercase;
- color: black;
- padding: 0;
- margin: 0;
+section .content {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+  
+section .text {
+  width: 100%;
+}
+  
+.leveler {
+  position: relative;
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translateZ(0px) translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+  
+#start {
+  position: absolute;
+  padding-top: 70vw;
+  margin-left: 15vw;
+  width: 70vw;
+  overflow: hidden;
+  -webkit-animation: rotation 40s infinite linear;
+}
+  
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+  img {
+  width: 100%;
+}
+  
+#title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9vw;
+  margin-top: 31vw;
+  margin-left: 17vw;
+  line-height: 6vw;
+  color: #302c2d;
+  opacity: 1;
+  animation: move 5s
+}
+  
+@keyframes move {
+    from {
+      margin-top: 13vw;
+      opacity: 0.2;
+    }
+     to {
+      margin-top: 31vw;
+      opacity: 1;
+    }
+  }
+  
+.uppertext {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.9vw;
+  letter-spacing: 0.1vw;
+  margin-top: 5vw;
+  margin-left: 17vw;
 }
 
-#flat h2 {
- font-family: 'Oswald', sans-serif;
- font-size: 70px;
- letter-spacing: 10px;
- text-align: center;
- color: white;
- font-weight: 400;
- text-transform: uppercase;
- z-index: 10;
- opacity: .9;
+ @keyframes expand {
+    from {
+      width: 0vw;
+      opacity: 0;
+    }
+     to {
+      width: 28vw;
+      opacity: 1;
+    }
+  }
+.scroll {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vw;
+  font-weight: 900;
+  letter-spacing: 0.3vw;
+  color: #302c2d;
+  margin-left: 30vw;
+  margin-top: 70vw;
 }
-
-#flat h3 {
- font-family: 'Oswald', sans-serif;
- font-size: 14px;
- line-height: 0;
- font-weight: 400;
- letter-spacing: 8px;
- text-transform: uppercase;
- color: black;
+  
+.square {
+  position: relative;
+  content:'';
+  float: right;
+  height: 120vh;
+  width: 100vh;
 }
-#flat p {
- font-family: 'Source Sans Pro', sans-serif;
- font-weight: 400;
- font-size: 14px;
- line-height: 24px;
+  
+.paragraph {
+  width: 70vw;
+  margin-left: 18vw;
+  margin-top: 30vw;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8vw;
+  line-height: 3.4vw;
+  letter-spacing: 0.3vw;
+  color: black;
 }
-.first-character {
- font-weight: 400;
- float: left;
- font-size: 84px;
- line-height: 64px;
- padding-top: 4px;
- padding-right: 8px;
- padding-left: 3px;
- font-family: 'Source Sans Pro', sans-serif;
+#one2 {
+  background: linear-gradient(to bottom right, #B0E0E6, #4169E1);
 }
-.gradient {
-	color: yellow;
-	font-family: "Arial", sans-serif;
+.poster {
+  width: 70vw;
+  margin-top: 4vw;
+  margin-left: 18vw;
+  z-index: 1;
 }
-.mother {
-	color: green;
-	font-family: "Arial", sans-serif;
+#mobiletext {
+    color: #FFFFFF;
+  }  
 }
-.father {
-	color: pink;
-	font-family: "Arial", sans-serif;
+/*параметры для десктопа*/
+@media only screen and (min-width:990px) {
+  
+ul {
+  position: fixed;
+  display: block;
+  margin-left: -200px;
+  margin-top: -6vw;
+  z-index: 3;
 }
-#flat .title {
- background: white;
- padding: 60px;
- margin: 0 auto;
- text-align: center;
+  
+.nav {
+  position: fixed;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85vw;
+  transform: rotate(-90deg);
+  margin-left: -245px;
+  margin-top: -12vw;
+  letter-spacing: 0.2vw;
+  z-index: 3;
 }
-
-#flat .title h1 {
- font-size: 35px;
- letter-spacing: 8px;
+  
+li {
+  content:'';
+  height: 40px;
+  width: 5px;
+  transition: width 0.3s ease-in-out;
+}  
+  
+li:hover  {
+   transition: width 0.3s ease-in-out;
+   width: 80px;
 }
-#flat .block {
- background: white;
- padding: 6px;
- width: 820px;
- margin: 0 auto;
- text-align: justify;
+#one {background-color:#4169E1;}
+#two {background-color:#B22222;}
+#three {background-color:#C71585;}
+#four {background-color:#9370DB;}
+#five {background-color:#483D8B;}
+section {
+  position: relative;
+  margin-left: -10px;
+  display: block;
+  width: 120%;
+  height: 60vw;
+  overflow: hidden;
 }
-
-#flat .block-gray {
- background: #f2f2f2;
- padding: 6px;
+  
+section .cover {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
-#flat .section-overlay-mask {
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- background-color: black;
- opacity: 0.70;
+  
+section .cover img #start {
+  position: absolute;
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-#flat .parallax-one {
- padding-top: 200px;
- padding-bottom: 200px;
- overflow: hidden;
- position: relative;
- width: 100%;
- background-image: url("https://raw.githubusercontent.com/Mihina-Polina/Disain/refs/heads/main/%D0%A7%D0%B5%D0%B1%D1%83%D1%80%D0%B0%D1%88%D0%BA%D0%B0_(1971).jpg");
- background-attachment: fixed;
- background-size: cover;
- -moz-background-size: cover;
- -webkit-background-size: cover;
- background-repeat: no-repeat;
- background-position: top center;
+  
+section .content {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
-#flat .parallax-two {
- padding-top: 200px;
- padding-bottom: 200px;
- overflow: hidden;
- position: relative;
- width: 100%;
- background-image: url("https://raw.githubusercontent.com/Mihina-Polina/Disain/refs/heads/main/w1056h594fill-66f2ade555228.jpg");
- background-attachment: fixed;
- background-size: cover;
- -moz-background-size: cover;
- -webkit-background-size: cover;
- background-repeat: no-repeat;
- background-position: center center;
+  
+section .text {
+  width: 100%;
 }
-#flat .parallax-three {
- padding-top: 200px;
- padding-bottom: 200px;
- overflow: hidden;
- position: relative;
- width: 100%;
- background-image: url("https://raw.githubusercontent.com/Mihina-Polina/Disain/refs/heads/main/960x540.webp");
- background-attachment: fixed;
- background-size: cover;
- -moz-background-size: cover;
- -webkit-background-size: cover;
- background-repeat: no-repeat;
- background-position: center center;
+  
+.leveler {
+  position: relative;
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translateZ(0px) translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
-#flat .line-break1 {
- background: linear-gradient(60deg, yellow, green, pink);
- width: 100%;
- margin: 0 auto;
+  
+#start {
+  position: absolute;
+  padding-top: -9vw;
+  margin-left: -5px;
+  width: 38vw;
+  overflow: hidden;
+  -webkit-animation: rotation 180s infinite linear;
 }
-#flat .line-break2 {
- background: linear-gradient(60deg, green, pink, yellow);
- width: 100%;
- margin: 0 auto;
+  
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
 }
-#flat .line-break3 {
- background: linear-gradient(60deg, pink, yellow, green);
- width: 100%;
- margin: 0 auto;
+  
+img {
+  width: 100%;
 }
-@media screen and (max-width: 959px) and (min-width: 768px) {
- #flat .block {
-  padding: 40px;
-  width: 620px;
- }
+  
+#title {
+  position: fixed;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4.31vw;
+  margin-top: 25%;
+  margin-left: 2%;
+  line-height: 2.63vw;
+  color: #302c2d;
+  opacity: 1;
+  animation: move 3s
 }
-@media screen and (max-width: 767px) {
- #flat .block {
-  padding: 30px;
-  width: 420px;
- }
- #flat h2 {
-  font-size: 30px;
- }
- #flat .block {
-  padding: 30px;
- }
- #flat .parallax-one, #flat .parallax-two, #flat .parallax-three {
-  padding-top: 100px;
-  padding-bottom: 100px;
- }
+  
+@keyframes move {
+    from {
+      margin-left: 8vw;
+      opacity: 0.3;
+    }
+     to {
+      margin-left: 10vw;
+      opacity: 1;
+    }
+  }
+  
+.uppertext {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1vw;
+  letter-spacing: 0.25vw;
+  margin-top: 2.63vw;
+  margin-left: 10.1vw;
 }
-@media screen and (max-width: 479px) {
- #flat .block {
-  padding: 30px 15px;
-  width: 290px;
- }
+  
+ @keyframes expand {
+    from {
+      width: 0vw;
+      opacity: 0;
+    }
+     to {
+      width: 13.68vw;
+      opacity: 1;
+    }
+  }
+  
+.scroll {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.80vw;
+  font-weight: 900;
+  letter-spacing: 0.1vw;
+  color: #302c2d;
+  margin-left: 45vw;
+  margin-top: 20vw;
+}
+  
+.square {
+  position: relative;
+  content:'';
+  float: left;
+  margin-left: 550px;
+  height: 120vh;
+  width: 300vh;
+}
+  
+.paragraph {
+  float: left;
+  width: 29.28vw;
+  margin-left: 25px;
+  margin-top: 4vw;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.31vw;
+  line-height: 2vw;
+  letter-spacing: 0.2vw;
+  color: black;
+}
+#one2 {
+  background: linear-gradient(to bottom right, #B0E0E6, #4169E1);
+}
+.poster {
+  overflow: hidden;
+  width: 350px;
+  margin-top: 6vw;
+  margin-left: 525px;
+  z-index: 1;
+ filter: drop-shadow(4px 10px 15px white);
+}
 }
