@@ -15,7 +15,7 @@ html, body {
 
   position: absolute;
 
-  margin-top: -50vh;
+  margin-top: -1vh;
 
   overflow: auto;
 
@@ -427,7 +427,6 @@ width: 95%;
  .gradient {
 	color: black;
 	font-family: "Arial", sans-serif;
-}
 float: left;
 
  font-size: 84px;
@@ -441,3 +440,4 @@ float: left;
  padding-left: 3px;
 
  font-family: 'Montserrat', sans-serif; 
+ }
