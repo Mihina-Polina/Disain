@@ -92,7 +92,8 @@ for (let g = 0; g < groupCount; g++) {
 }
 const hdrLoader = new HDRLoader();
 const hdrTexture = hdrLoader.load(
-	"https://github.com/Mihina-Polina/Disain/raw/refs/heads/main/venice.hdr",
+	//"https://github.com/Mihina-Polina/Disain/raw/refs/heads/main/venice.hdr",
+	"https://cdn.jsdelivr.net/gh/Mihina-Polina/Disain@main/venice.hdr",
 	() => {
 		hdrTexture.mapping = THREE.EquirectangularReflectionMapping;
 		hdrTexture.colorSpace = THREE.SRGBColorSpace;
