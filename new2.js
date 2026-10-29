@@ -37,8 +37,8 @@ const palette = [
 for (let g = 0; g < groupCount; g++) {
 	const video = document.createElement("video");
 	video.crossOrigin = "anonymous";
-	video.src =
-		"https://github.com/Mihina-Polina/Disain/raw/refs/heads/main/gliter.webm";
+	//video.src = "https://github.com/Mihina-Polina/Disain/raw/refs/heads/main/gliter.webm";
+	video.src = "https://jsdelivr.net";
 	video.loop = true;
 	video.muted = true;
 	video.playbackRate = 0.010 + Math.random() * 1.0;
@@ -47,6 +47,8 @@ for (let g = 0; g < groupCount; g++) {
 	videoTexture.colorSpace = THREE.SRGBColorSpace;
 	videoTexture.minFilter = THREE.LinearFilter;
 	videoTexture.magFilter = THREE.LinearFilter;
+	videoTexture.format = THREE.RGBAFormat;
+	videoTexture.type = THREE.UnsignedByteType;
 
 	const particlesGeometry = new THREE.BufferGeometry();
 	const positionsArray = new Float32Array(particlesPerGroup * 3);
@@ -90,7 +92,7 @@ for (let g = 0; g < groupCount; g++) {
 }
 const hdrLoader = new HDRLoader();
 const hdrTexture = hdrLoader.load(
-	"https://raw.githubusercontent.com/Mihina-Polina/Disain/refs/heads/main/venice.hdr",
+	"https://github.com/Mihina-Polina/Disain/raw/refs/heads/main/venice.hdr",
 	() => {
 		hdrTexture.mapping = THREE.EquirectangularReflectionMapping;
 		hdrTexture.colorSpace = THREE.SRGBColorSpace;
