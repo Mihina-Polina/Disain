@@ -90,7 +90,7 @@ for (let g = 0; g < groupCount; g++) {
 }
 const hdrLoader = new HDRLoader();
 const hdrTexture = hdrLoader.load(
-	"https://raw.githubusercontent.com/Mihina-Polina/Disain/refs/heads/main/st_peters_square_night_2k.hdr",
+	"https://raw.githubusercontent.com/Mihina-Polina/Disain/refs/heads/main/venice.hdr",
 	() => {
 		hdrTexture.mapping = THREE.EquirectangularReflectionMapping;
 		hdrTexture.colorSpace = THREE.SRGBColorSpace;
